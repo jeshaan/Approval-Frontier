@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# data (source of truth is Kaggle, not this repo)
+*.csv
+*.csv.gz
+data/
+
+# duckdb
+*.duckdb
+*.duckdb.wal
