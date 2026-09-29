@@ -37,18 +37,18 @@ loan_amnt, funded_amnt, term, int_rate, grade, sub_grade, emp_length, home_owner
 
 ## 1-week plan (Sun 9/27 to Sat 10/3)
 
-- [ ] **Day 1 (Sun 9/27): Apply, set up, profile.**
+- [x] **Day 1: Apply, set up, profile.**
   - Submit the Capital One application first.
   - Load the data into DuckDB.
   - Profile it: row counts, null rates, loan_status values, date range, term split.
   - Lock the scope decisions above.
   - Output: 01_profile.sql, notes file, short data dictionary.
-- [ ] **Day 2 (Mon 9/28): Clean.**
+- [x] **Day 2: Clean.**
   - Fix int_rate and revol_util (stored as % strings), emp_length (text), and issue dates.
   - Filter to final statuses and build the derived fields.
   - Validate: totals reconcile, and default rate rises steadily from grade A to G.
   - Output: 02_clean.sql building loans_clean, assumptions log.
-- [ ] **Day 3 (Tue 9/29): Segment analysis.**
+- [ ] **Day 3: Segment analysis.**
   - Default rate, average rate, and net return per dollar lent, cut by grade, FICO band, DTI band, purpose, and vintage.
   - Window functions:
     - rank segments by total loss
@@ -56,24 +56,24 @@ loan_amnt, funded_amnt, term, int_rate, grade, sub_grade, emp_length, home_owner
     - vintage-over-vintage change with LAG
   - Grade x DTI grid of net return.
   - Output: 03_segments.sql, 5 or 6 result CSVs.
-- [ ] **Day 4 (Wed 9/30): Policy simulation.**
+- [ ] **Day 4: Policy simulation.**
   - Run 3 candidate policies (below). For each: loans lost, interest income given up, charge-offs avoided, net profit change.
   - Rerun at an assumed 2% and 4% cost of funds.
   - Pick a recommendation.
   - Optional stretch: a logistic regression risk score to plot approval rate vs. loss rate.
   - Output: 04_policies.sql, policy comparison table.
-- [ ] **Day 5 (Thu 10/1): Tableau dashboard.**
+- [ ] **Day 5: Tableau dashboard.**
   - Three views:
     1. KPI tiles plus the grade x DTI heatmap
     2. Policy comparison
     3. Default rate by vintage
   - Each view gets a headline sentence stating the takeaway.
   - Output: published Tableau Public link.
-- [ ] **Day 6 (Fri 10/2): Write-up and repo.**
+- [ ] **Day 6: Write-up and repo.**
   - One-page summary, answer first, then method, then limitations.
   - README that leads with the finding.
   - Resume bullet with real numbers.
-- [ ] **Day 7 (Sat 10/3): Defend it.**
+- [ ] **Day 7: Defend it.**
   - 2-minute verbal walkthrough.
   - Mock Power Day grilling.
   - Patch weak spots, then publish.
