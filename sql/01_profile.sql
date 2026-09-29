@@ -1,5 +1,5 @@
 CREATE OR REPLACE VIEW raw_loans AS
-SELECT * FROM read_csv_auto('/Users/eshaanjalali/Desktop/Data Analysis Project/Approval-Frontier/data/accepted*.csv', ignore_errors=true);
+SELECT * FROM read_csv_auto('/Users/eshaanjalali/Desktop/Approval-Frontier/data/accepted*.csv', ignore_errors=true);
 
 select * from raw_loans limit 5;
 SELECT COUNT(*) AS total_rows FROM raw_loans;
