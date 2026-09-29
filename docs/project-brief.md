@@ -35,7 +35,7 @@ loan_amnt, funded_amnt, term, int_rate, grade, sub_grade, emp_length, home_owner
 - Tableau Public for the dashboard (aggregated exports only)
 - GitHub repo with numbered SQL files
 
-## 1-week plan (Sun 9/27 to Sat 10/3)
+## Plan Timeline
 
 - [x] **Day 1: Apply, set up, profile.**
   - Submit the Capital One application first.
@@ -107,3 +107,4 @@ Analyzed [N] consumer loans in SQL to size the tradeoff between approval volume 
 Update after each session: what got done, decisions made, what's next.
 
 - 9/26: Scoped the project and wrote this brief. Next: Day 1.
+- 9/28 (Day 2): Built loans_parsed and loans_clean (589,488 loans, 36-month, 2012-2015, final statuses). Parsed % strings and dates, nulled 5 implausible DTI values, built defaulted, net_profit (net of collection fees), and dti/fico/income/emp bands. Validated: default rate rises A to G (5.5% to 40.2%), 82,728 defaults reconcile, portfolio net profit about +$601M. Dropped 147 unresolved 2015 loans (0.025%, worst-case default rate impact under 0.01 pts). F/G are only 0.77% of loans, so policy (a) will likely have small impact. Next: Day 3 segment analysis (03_segments.sql).
